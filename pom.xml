@@ -10,10 +10,16 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.itmuch</groupId>
-  <artifactId>user-center</artifactId>
+  <artifactId>knowledge-share</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>user-center</name>
+  <name>knowledge-share</name>
   <description>Demo project for Spring Boot</description>
+
+  <modules>
+    <module>users-center</module>
+    <module>content-center</module>
+  </modules>
+  <packaging>pom</packaging>
   <properties>
     <java.version>1.8</java.version>
     <tk.mybatis.version>4.1.5</tk.mybatis.version>
@@ -44,6 +50,11 @@
       <groupId>tk.mybatis</groupId>
       <artifactId>mapper</artifactId>
       <version>${tk.mybatis.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
     </dependency>
   </dependencies>
 
@@ -78,6 +89,8 @@
         </dependencies>
       </plugin>
     </plugins>
+
   </build>
+
 
 </project>
